@@ -7,6 +7,7 @@ Add difficulty , easy , hard
 If no internet get world from local, if yes get word from api
 Add arabic language 
 Add settings modal.
+Add play Again 
 
 
 Notes 
@@ -17,3 +18,5 @@ Run shell : json-server db.json --port 3001
 Challenge : imagine yourself at a company, and you are given this 
 codebase. and asked to add firebase db to it. let's see if you 
 are a true developer or not. 
+
+6.6
