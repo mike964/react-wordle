@@ -8,7 +8,8 @@ If no internet get world from local, if yes get word from api
 Add arabic language 
 Add settings modal.
 Add play Again 
-Make keys on Keypad Clickable
+Make keys on Keypad Clickable                             DONE 6.6
+Make play again button works                              
 
 
 Notes 

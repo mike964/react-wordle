@@ -104,7 +104,7 @@ h1 {
 	top: 0;
 	left: 0;
 }
-.modal div {
+.modal div.modal-body {
 	max-width: 480px;
 	background: #fff;
 	padding: 40px;

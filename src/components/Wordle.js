@@ -11,12 +11,13 @@ export default function Wordle({ solution }) {
 		currentGuess,
 		setCurrentGuess,
 		guesses,
+		showModal,
+		setShowModal,
 		turn,
 		isCorrect,
 		usedKeys,
 		handleKeyup,
 	} = useWordle(solution)
-	const [showModal, setShowModal] = useState(false)
 
 	useEffect(() => {
 		window.addEventListener('keyup', handleKeyup)
@@ -31,7 +32,7 @@ export default function Wordle({ solution }) {
 		}
 
 		return () => window.removeEventListener('keyup', handleKeyup)
-	}, [handleKeyup, isCorrect, turn])
+	}, [handleKeyup, isCorrect, turn, setShowModal])
 
 	return (
 		<div>

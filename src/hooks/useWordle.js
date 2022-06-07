@@ -7,6 +7,7 @@ const useWordle = solution => {
 	const [history, setHistory] = useState([]) // each guess is a string
 	const [isCorrect, setIsCorrect] = useState(false)
 	const [usedKeys, setUsedKeys] = useState({}) // {a: 'grey', b: 'green', c: 'yellow'} etc
+	const [showModal, setShowModal] = useState(true)
 
 	// format a guess into an array of letter objects
 	// e.g. [{key: 'a', color: 'yellow'}]
@@ -109,10 +110,15 @@ const useWordle = solution => {
 		}
 	}
 
+	// handle play again button click
+	const resetGame = () => {}
+
 	return {
 		turn,
 		currentGuess,
 		setCurrentGuess,
+		showModal,
+		setShowModal,
 		guesses,
 		isCorrect,
 		usedKeys,
