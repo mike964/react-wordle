@@ -60,17 +60,26 @@ h1 {
 	animation: bounce 0.2s ease-in-out forwards;
 }
 .keypad {
-	max-width: 500px;
+	max-width: 580px;
 	margin: 20px auto;
 }
 .keypad > div {
 	margin: 5px;
-	width: 40px;
+	width: 50px;
 	height: 50px;
-	background: #eee;
+	background: #dfe4f3;
 	display: inline-block;
 	border-radius: 6px;
 	line-height: 50px;
+}
+.keypad > div:hover {
+	background: #d3daee;
+	cursor: pointer;
+}
+.single-key {
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 1.1rem;
 }
 .keypad > div.green {
 	background: #5ac85a;

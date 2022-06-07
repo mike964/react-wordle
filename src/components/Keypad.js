@@ -1,24 +1,45 @@
 import React, { useEffect, useState } from 'react'
+import data from '../data.json'
 
-export default function Keypad({ usedKeys }) {
-  const [letters, setLetters] = useState(null)
+export default function Keypad({ usedKeys, setCurrentGuess }) {
+	const [letters, setLetters] = useState(null)
 
-  useEffect(() => {
-    fetch('http://localhost:3001/letters')
-      .then(res => res.json())
-      .then(json => {
-        setLetters(json)
-      })
-  }, [])
+	useEffect(() => {
+		// fetch('http://localhost:3001/letters')
+		//   .then(res => res.json())
+		//   .then(json => {
+		//     setLetters(json)
+		//   })
+		setLetters(data.letters)
+	}, [])
 
-  return (
-    <div className="keypad">
-      {letters && letters.map(l => {
-        const color = usedKeys[l.key]
-        return (
-          <div key={l.key} className={color}>{l.key}</div>
-        )
-      })}
-    </div>
-  )
+	function handleKeyPress(key) {
+		console.log('onKeyDown.')
+		// console.log(e.key)
+		// console.log(e.keyCode)
+		// console.log('onKeyDown.')
+		// console.log(key)
+		setCurrentGuess(prev => prev + key)
+		// console.log(e.keyCode)
+	}
+
+	return (
+		<div className='keypad'>
+			{letters &&
+				letters.map(lt => {
+					const color = usedKeys[lt.key]
+
+					return (
+						<div
+							key={lt.key}
+							className={`single-key ${color}`}
+							onClick={() => {
+								handleKeyPress(lt.key)
+							}}>
+							{lt.key}
+						</div>
+					)
+				})}
+		</div>
+	)
 }

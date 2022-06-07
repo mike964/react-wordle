@@ -8,6 +8,7 @@ If no internet get world from local, if yes get word from api
 Add arabic language 
 Add settings modal.
 Add play Again 
+Make keys on Keypad Clickable
 
 
 Notes 
