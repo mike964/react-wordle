@@ -5,6 +5,15 @@ import data from './data.json'
 function App() {
 	const [solution, setSolution] = useState(null)
 
+	// * Set new random word
+	function setRandomWord() {
+		const { solutions } = data
+		// random int between 0 & 14
+		const randomSolution =
+			solutions[Math.floor(Math.random() * solutions.length)]
+		setSolution(randomSolution.word)
+	}
+
 	useEffect(() => {
 		// fetch('http://localhost:3001/solutions')
 		//   .then(res => res.json())
@@ -14,17 +23,13 @@ function App() {
 		//     setSolution(randomSolution.word)
 		//   })
 
-		const { solutions } = data
-		// random int between 0 & 14
-		const randomSolution =
-			solutions[Math.floor(Math.random() * solutions.length)]
-		setSolution(randomSolution.word)
-	}, [setSolution])
+		setRandomWord()
+	}, [])
 
 	return (
 		<div className='App'>
 			<h1>Wordle Game</h1>
-			{solution && <Wordle solution={solution} />}
+			{solution && <Wordle solution={solution} setRandomWord={setRandomWord} />}
 		</div>
 	)
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Modal({ isCorrect, solution, turn }) {
+export default function Modal({ isCorrect, solution, turn, resetGame }) {
 	return (
 		<div className='modal'>
 			<div className='modal-body'>
@@ -18,7 +18,7 @@ export default function Modal({ isCorrect, solution, turn }) {
 						<p>Better luck next time :)</p>
 					</>
 				)}
-				<button className='x'>
+				<button className='x' onClick={resetGame}>
 					Play Again <i className='fa-solid fa-rotate-right' />
 				</button>
 			</div>

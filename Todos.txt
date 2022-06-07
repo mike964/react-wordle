@@ -9,7 +9,8 @@ Add arabic language
 Add settings modal.
 Add play Again 
 Make keys on Keypad Clickable                             DONE 6.6
-Make play again button works                              
+Make play again button works - add functionality           done 6.7
+Add timer and show time in modal
 
 
 Notes 
