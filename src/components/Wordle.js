@@ -44,7 +44,11 @@ export default function Wordle({ solution, setRandomWord }) {
 	return (
 		<div>
 			<Grid guesses={guesses} currentGuess={currentGuess} turn={turn} />
-			<Keypad usedKeys={usedKeys} setCurrentGuess={setCurrentGuess} />
+			<Keypad
+				usedKeys={usedKeys}
+				currentGuess={currentGuess}
+				setCurrentGuess={setCurrentGuess}
+			/>
 			{showModal && (
 				<Modal
 					isCorrect={isCorrect}

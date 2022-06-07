@@ -6,11 +6,11 @@ Add firebase db
 Add difficulty , easy , hard
 If no internet get world from local, if yes get word from api
 Add arabic language 
-Add settings modal.
-Add play Again 
+Add settings modal - timer/no-timer
+Add play Again btn                                           done
 Make keys on Keypad Clickable                             DONE 6.6
 Make play again button works - add functionality           done 6.7
-Add timer and show time in modal
+Add timer and show time in modal 
 
 
 Notes 

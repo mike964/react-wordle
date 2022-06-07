@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import data from '../data.json'
 
-export default function Keypad({ usedKeys, setCurrentGuess }) {
+export default function Keypad({ usedKeys, currentGuess, setCurrentGuess }) {
 	const [letters, setLetters] = useState(null)
 
 	useEffect(() => {
@@ -19,7 +19,9 @@ export default function Keypad({ usedKeys, setCurrentGuess }) {
 		// console.log(e.keyCode)
 		// console.log('onKeyDown.')
 		// console.log(key)
-		setCurrentGuess(prev => prev + key)
+		if (currentGuess.length < 5) {
+			setCurrentGuess(prev => prev + key)
+		}
 		// console.log(e.keyCode)
 	}
 
