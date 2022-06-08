@@ -28,7 +28,10 @@ function App() {
 
 	return (
 		<div className='App'>
-			<h1>Wordle Game</h1>
+			<div className='header'>
+				<h1>Wordle Game</h1>
+			</div>
+
 			{solution && <Wordle solution={solution} setRandomWord={setRandomWord} />}
 		</div>
 	)

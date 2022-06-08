@@ -1,0 +1,31 @@
+# Todos
+
+---
+
+22.5.32
+
+- [ ] Get words from random api
+- [ ] Add firebase db
+- [ ] Add difficulty , easy , hard
+- [ ] If no internet get world from local, if yes get word from api
+- [ ] Add arabic language
+- [ ] Add settings modal - timer/no-timer
+- [x] Add play Again btn done
+- [x] Make keys on Keypad Clickable DONE 6.6
+- [x] Make play again button works - add functionality done 6.7
+- [ ] Add timer and show time in modal
+      uselocalstorage with custom hook to save user name
+
+# Notes
+
+---
+
+nytimes.com wordle
+Run shell : json-server db.json --port 3001
+
+6.3
+Challenge : imagine yourself at a company, and you are given this
+codebase. and asked to add firebase db to it. let's see if you
+are a true developer or not.
+
+6.6
